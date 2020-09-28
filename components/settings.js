@@ -54,7 +54,12 @@ export default class SettingScreen extends Component{
     })
 
     alert("Profile Updated Successfully")
-
+     this.setState({
+       firstName:'',
+       lastName:'',
+       address:'',
+       contact:''
+     })
   }
 
  componentDidMount=()=>{

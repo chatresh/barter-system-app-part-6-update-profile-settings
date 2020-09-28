@@ -7,6 +7,7 @@ import { BottomNavigator } from './components/BottomNavigator';
 import  settings  from './components/settings';
 
 import LoginScreen from './screens/LoginScreen'
+import {AppDrawerNavigator} from './components/AppDrawerNavigator';
 
 export default function App() {
   return (
@@ -14,24 +15,12 @@ export default function App() {
   );
 }
 
- const AppDrawerNavigator = createDrawerNavigator(
- {
-   Home:{screen:BottomNavigator},
-   Settings:{screen:settings}
- },
- {
-        contentComponent: customSideBarMenu
-    },
-    {
-        initialRouteName : "Home"
-    }
- )
+ 
 
  const SwitchNavigator = createSwitchNavigator({
      LoginScreen:LoginScreen,
      AppDrawerNavigator:AppDrawerNavigator,
-   
-    
+  
  })
 
  const AppContainer = createAppContainer(SwitchNavigator);
