@@ -2,13 +2,13 @@ import React from 'react';
 import { createAppContainer,createSwitchNavigator } from 'react-navigation';
 import { DrawerItems , createDrawerNavigator } from 'react-navigation-drawer';
 
-import customSideBarMenu from './components/customSideBarMenu'
-import { BottomNavigator } from './components/BottomNavigator';
-import  settings  from './components/settings';
+import customSideBarMenu from './customSideBarMenu'
+import { BottomNavigator } from './BottomNavigator';
+import  settings  from './settings';
 
-import LoginScreen from './screens/LoginScreen'
+import LoginScreen from '../screens/LoginScreen'
 
-expoet default const AppDrawerNavigator = createDrawerNavigator(
+export const AppDrawerNavigator = createDrawerNavigator(
  {
    Home:{screen:BottomNavigator},
    Settings:{screen:settings}
